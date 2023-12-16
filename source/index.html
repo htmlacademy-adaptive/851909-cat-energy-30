@@ -5,12 +5,20 @@
     <title>Cat Energy</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" href="styles/styles.css">
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" href="favicons/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="favicons/180.png">
+    <link rel="manifest" href="manifest.webmanifest">
   </head>
   <body class="page__body">
     <header class="header">
       <a class="header__logo logo" href="index.html" aria-current="page">
-        <img class="logo__logo-image" src="images/logo-mobile.svg" width="33" height="38" alt="Логотип интернет-магазина Cat Energy">
-        <img class="logo__logo-text" src="images/logo_text-mobile.svg" width="101" height="18" alt="Cat Energy">
+        <picture>
+          <source type="image/svg+xml" media="(min-width: 1440px)" srcset="images/logo-pc.svg" width="70" height="59" >
+          <source type="image/svg+xml" media="(min-width: 768px)" srcset="images/logo-tablet.svg" width="60" height="50" >
+          <img class="logo__logo-image" src="images/logo-mobile.svg" width="33" height="38" alt="Логотип интернет-магазина Cat Energy">
+        </picture>
+        <img class="logo__logo-text" src="images/logo_text.svg" width="101" height="18" alt="Cat Energy">
       </a>
       <nav class="main-nav">
         <button class="main-nav__toggle" type="button">
@@ -40,7 +48,11 @@
               <p class="main-hero__text">Занялся собой? Займись котом!</p>
               <a class="main-hero__link" href="form.html">Подобрать программу</a>
             </div>
-            <img class="main-hero__product-image" src="images/hero_food-mob@1x.png" width="280" height="270" alt="Cat Energy PRO курица">
+            <picture>
+              <source type="image/png" media="(min-width: 1440px)" srcset="images/hero_image-pc@1x.png 1x, images/hero_image-pc@2x.png 2x" width="552" height="499">
+              <source type="image/png" media="(min-width: 768px)" srcset="images/hero_image-tab@1x.png 1x, images/hero_image-tab@2x.png 2x" width="709" height="609">
+              <img class="main-hero__product-image" src="images/hero_image-mob@1x.png" srcset="images/hero_image-mob@2x.png 2x" width="280" height="270" alt="Cat Energy PRO курица">
+            </picture>
           </div>
         </div>
       </section>
@@ -113,7 +125,18 @@
             <span>15 000 РУБ.</span>
           </div>
           <div class="example__slider">
-            <img class="example__img" src="images/slider_image-mob@1x.png" width="280" height="256" alt="Слайдер до/после">
+            <div class="example__slider-after">
+              <picture>
+                <source type="image/png" media="(min-width: 768px)" srcset="images/slider_cat_after-pc@1x.png 1x, images/slider_cat_after-pc@2x.png 2x" width="560" height="512">
+                <img class="example__slider-after-image" src="images/slider_cat_after-mob@1x.png" srcset="images/slider_cat_after-mob@2x.png 2x" width="280" height="256" alt="Кот после диеты">
+              </picture>
+            </div>
+            <div class="example__slider-before">
+              <picture>
+                <source type="image/png" media="(min-width: 768px)" srcset="images/slider_cat_before-pc@1x.png 1x, images/slider_cat_before-pc@2x.png 2x" width="560" height="512">
+                <img class="example__slider-before-image" src="images/slider_cat_before-mob@1x.png" srcset="images/slider_cat_before-mob@2x.png 2x" width="280" height="256" alt="Кот до диеты">
+              </picture>
+            </div>
             <button class="example__button" type="button">
               <span class="visually-hidden">Слайдер</span>
             </button>
@@ -135,7 +158,7 @@
       <div class="container">
         <div class="footer__logo footer-logo">
           <a class="footer__link" href="index.html" aria-current="page">
-            <img class="footer-logo__image-text" src="images/footer_logo.svg" width="128" height="24" alt="Cat Energy">
+            <img class="footer-logo__image-text" src="images/logo_text.svg" width="128" height="24" alt="Cat Energy">
           </a>
         </div>
         <ul class="footer__list">
@@ -166,7 +189,9 @@
         </ul>
         <a class="developer" href="https://htmlacademy.ru/intensive/adaptive" target="_blank" rel="noreferrer noopener">
           HTML Academy
-          <img class="developer__logo" src="images/html_academy_logo.svg" width="27" height="34" alt="Логотип HTML Academy">
+          <svg xmlns="http://www.w3.org/2000/svg" width="27" height="34" viewBox="0 0 27 34" fill="none">
+            <path d="M13.6426 0.0157537L13.5 0L0 1.40733V26.0129L13.5 34L27 26.0129V1.40733L13.6426 0.0157537ZM25.2344 25.0151L13.5 31.9573L1.76561 25.0151V14.9293L13.4507 21.8451L13.4701 23.0984L5.45351 18.3548L5.44295 19.5801L13.4894 24.3885L13.5088 25.675L5.46408 20.9174L5.45351 22.1427L13.5 26.9511L21.6239 22.1182V20.8929V16.909L25.2432 14.7595L25.2344 25.0151ZM25.2344 13.4519L22.0147 15.3319L20.5325 16.2071L13.4666 12.0201L13.456 13.2454L19.4957 16.818L19.4429 16.8495L19.3126 16.9247L18.4536 17.4166L13.4666 14.4689L13.456 15.6942L17.3921 18.0222L16.4591 18.6314L16.438 18.6436L13.4666 16.902L13.456 18.1273L15.4029 19.2615L13.4155 20.4483L1.7973 13.5762L13.4349 6.61831L25.2344 13.4519ZM25.2344 12.2266L13.4401 5.31075L1.76561 12.2196V2.9897L13.5 1.76442L25.2344 2.9897V12.2266Z" fill="#666666"/>
+          </svg>
         </a>
       </div>
     </footer>
