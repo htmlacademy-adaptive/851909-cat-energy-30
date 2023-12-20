@@ -1,0 +1,19 @@
+.main-hero {
+  font-family: $primary-font;
+  line-height: 14px;
+  text-align: center;
+  text-transform: uppercase;
+  color: $white;
+
+  background: linear-gradient(to bottom, $brand-color 0%, $brand-color 302px, $white 302px, $white 100%);
+  opacity: 0.85;
+}
+
+.main-hero__content {
+  display: flex;
+  flex-direction: column;
+}
+
+.main-hero__link {
+  order: 2;
+}

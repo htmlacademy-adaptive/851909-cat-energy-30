@@ -1,5 +1,12 @@
 .header {
-  background-color: #663399;
-  color: #ffffff;
-  padding: 10px 15px;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  padding: 20px 13px;
+
+  border-bottom: 1px solid $border-gray;
+}
+
+.header__logo {
+  display: flex;
+  justify-content: space-between;
 }

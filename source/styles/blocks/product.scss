@@ -1,0 +1,24 @@
+.product {
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.product__list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.product__name {
+  font-family: $primary-font;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: $product-name;
+
+  &--promo {
+    color: $dark-additional;
+  }
+}
