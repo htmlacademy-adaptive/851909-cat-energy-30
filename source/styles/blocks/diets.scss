@@ -1,0 +1,32 @@
+.diets__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.diets__item {
+  padding: 20px;
+
+  background-color: $bg-gray;
+}
+
+.diets__title {
+  font-family: $primary-font;
+  font-size: 24px;
+  line-height: 37px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: $header-color;
+}
+
+.diets__link {
+  font-family: $primary-font;
+  font-size: 16px;
+  line-height: 16px;
+  text-transform: uppercase;
+  color: $black;
+}

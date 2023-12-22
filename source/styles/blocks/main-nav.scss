@@ -1,0 +1,38 @@
+.main-nav {
+  font-family: $primary-font;
+  font-size: 20px;
+  line-height: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  color: $black;
+}
+
+.main-nav__wrapper {
+  position: absolute;
+  left: 0;
+  top: 83px;
+  width: 100%;
+  // transform: translateY(-140%);
+  z-index: 1;
+
+  background-color: $white;
+}
+
+.main-nav__list {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.main-nav__item {
+  padding: 22px 0 24px 0;
+
+  border-bottom: 1px solid $border-gray;
+}
+
+.main-nav__link {
+  color: $black;
+}

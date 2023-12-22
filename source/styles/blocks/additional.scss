@@ -1,0 +1,44 @@
+.additional {
+  line-height: 14px;
+}
+
+.additional__title {
+  font-family: $primary-font;
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: 400;
+  color: $black;
+}
+
+.additional__inner {
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.additional__list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.additional__name {
+  font-family: $primary-font;
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: $product-name;
+}
+
+.additional__gift {
+  background: $brand-color;
+  opacity: 0.85;
+}
+
+.additional__gift-text {
+  text-align: center;
+  font-size: 16px;
+  line-height: 20px;
+  color: $white;
+}

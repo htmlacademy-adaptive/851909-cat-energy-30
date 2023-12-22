@@ -1,0 +1,22 @@
+.button {
+  display: block;
+  width: 100%;
+  height: 40px;
+  padding: 10px 0;
+
+  font-family: $primary-font;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  color: $white;
+
+  background-color: $brand-color;
+  border: none;
+
+  &--transparent {
+    color: $primary-color;
+
+    background-color: $bg-gray;
+  }
+}

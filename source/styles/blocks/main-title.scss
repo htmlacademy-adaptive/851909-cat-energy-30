@@ -1,0 +1,13 @@
+.main-title {
+  font-family: $primary-font;
+  font-size: 36px;
+  line-height: 36px;
+  font-weight: 400;
+  text-transform: none;
+  color: $header-color;
+
+  &--reverse {
+    text-align: center;
+    color: $white;
+  }
+}
