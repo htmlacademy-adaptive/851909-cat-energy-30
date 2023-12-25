@@ -10,16 +10,24 @@
 .contacts__title {
   font-family: $primary-font;
   font-size: 16px;
-  line-height: 20px;
+  line-height: 1.25;
   font-weight: 400;
   text-transform: uppercase;
   color: $dark-additional;
 }
 
 .contacts__address {
-  line-height: 20px;
+  line-height: 1.42;
 }
 
 .contacts__city {
-  line-height: 20px;
+  line-height: 1.42;
+}
+
+.contacts__map {
+  display: block;
+  width: 320px;
+  height: 362px;
+
+  border: 0;
 }
