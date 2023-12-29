@@ -21,8 +21,10 @@
       <img class="logo__logo-text" src="images/logo_text.svg" width="101" height="18" alt="Cat Energy">
       </a>
       <nav class="main-nav">
-        <button class="main-nav__toggle" type="button">
-          <span class="visually-hidden">Открыть меню</span>
+        <button class="main-nav__toggle" aria-label="Открыть меню" type="button">
+          <span></span>
+          <span></span>
+          <span></span>
         </button>
         <div class="main-nav__wrapper">
           <ul class="main-nav__list">
@@ -64,10 +66,10 @@
             </div>
             <div class="selection__contact-details contact-details">
               <h2 class="contact-details__title title-second-lvl">Контактные данные (владельца кота)</h2>
-              <label class="contact-details__label" for="email">E-mail:*</label>
-              <input class="contact-details__label" type="email" name="email" id="email" placeholder="kuklachev@gmail.com" required>
-              <label class="contact-details__label" for="phone">Телефон:*</label>
-              <input class="contact-details__label" type="tel" name="phone" id="phone" placeholder="8 (960) 900-60-90" required>
+              <label class="contact-details__label contact-details__label--email" for="email">E-mail:*</label>
+              <input class="contact-details__input" type="email" name="email" id="email" placeholder="kuklachev@gmail.com" required>
+              <label class="contact-details__label contact-details__label--phone" for="phone">Телефон:*</label>
+              <input class="contact-details__input" type="tel" name="phone" id="phone" placeholder="8 (960) 900-60-90" required>
             </div>
             <div class="selection__comment comment">
               <h2 class="comment__title title-second-lvl">Комментарий</h2>
@@ -98,6 +100,7 @@
             <p class="contacts__city">Санкт-Петербург</p>
           </div>
         </div>
+        <iframe class="contacts__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037876728547!2d30.320472477031682!3d59.93871647491513!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2sBolshaya%20Konyushennaya%20St%2C%2019%2F8%2C%20Sankt-Peterburg%2C%20191186!5e0!3m2!1sen!2sru!4v1703531489429!5m2!1sen!2sru" title="Офис компании по адресу набережная реки Карповки, 5, литера П, Санкт-Петербург" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </section>
     </main>
     <footer class="footer">

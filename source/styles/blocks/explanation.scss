@@ -4,3 +4,58 @@
 
   list-style: none;
 }
+
+.explanation__list-item {
+  position: relative;
+
+  margin-left: 80px;
+  margin-bottom: 26px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: -80px;
+    top: 0;
+
+    min-width: 60px;
+    height: 60px;
+
+    background-color: #68b738;
+  }
+
+  &--leaf {
+    &::before {
+      background-image: url("../../images/icons/stack.svg#explanation_leaf");
+      background-size: 30px 32px;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+
+  &--powder {
+    &::before {
+      background-image: url("../../images/icons/stack.svg#explanation_powder");
+      background-size: 26px 29px;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+
+  &--food {
+    &::before {
+      background-image: url("../../images/icons/stack.svg#explanation_food");
+      background-size: 25px 30px;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+
+  &--clock {
+    &::before {
+      background-image: url("../../images/icons/stack.svg#explanation_clock");
+      background-size: 26px 31px;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+}

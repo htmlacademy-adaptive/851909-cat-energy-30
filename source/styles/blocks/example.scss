@@ -5,7 +5,7 @@
 .example__info-value {
   font-family: $primary-font;
   font-size: 24px;
-  line-height: 24px;
+  line-height: 1;
   text-align: center;
   text-transform: uppercase;
   color: $black;
@@ -14,13 +14,13 @@
 .example__info-text {
   margin: 0 auto;
 
-  line-height: 12px;
+  line-height: 1;
   text-align: center;
 }
 
 .example__costs {
   font-family: $primary-font;
-  line-height: 20px;
+  line-height: 1.42;
   text-align: center;
   text-transform: uppercase;
   color: $black;

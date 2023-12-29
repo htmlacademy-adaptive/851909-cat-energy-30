@@ -9,24 +9,70 @@
 }
 
 .diets__item {
-  padding: 20px;
+  padding: 0 20px 22px;
 
   background-color: $bg-gray;
 }
 
 .diets__title {
+  position: relative;
+  margin-top: 30px;
+  margin-left: 70px;
+
   font-family: $primary-font;
   font-size: 24px;
-  line-height: 37px;
+  line-height: 1.54;
   font-weight: 400;
   text-transform: uppercase;
   color: $header-color;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: -70px;
+    top: -6px;
+
+    min-width: 50px;
+    height: 50px;
+
+    background-color: $brand-color;
+    border-radius: 50%;
+  }
+
+  &--weight-loss {
+    &::after {
+      content: "";
+      position: absolute;
+      left: -65px;
+      top: -9px;
+
+      width: 37px;
+      height: 51px;
+
+      background-image: url("../../images/icons/stack.svg#slim_cat");
+    }
+  }
+
+  &--weight-gain {
+    &::after {
+      content: "";
+      position: absolute;
+      left: -78px;
+      top: 5px;
+
+      width: 67px;
+      height: 28px;
+
+      background-image: url("../../images/icons/stack.svg#pro_cat");
+    }
+  }
 }
+
 
 .diets__link {
   font-family: $primary-font;
   font-size: 16px;
-  line-height: 16px;
+  line-height: 1;
   text-transform: uppercase;
   color: $black;
 }

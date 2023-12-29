@@ -7,15 +7,40 @@
   color: $black;
 }
 
+.main-nav__toggle {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 24px;
+  height: 16px;
+  padding: 0;
+
+  background-color: $transparent;
+  border: initial;
+}
+
+.main-nav__toggle span {
+  height: 2px;
+  width: 100%;
+
+  background-color: $black;
+}
+
 .main-nav__wrapper {
   position: absolute;
   left: 0;
   top: 83px;
   width: 100%;
-  // transform: translateY(-140%);
+  transform: translateY(-145%);
   z-index: 1;
 
   background-color: $white;
+
+  transition: transform 0.5s ease;
+}
+
+.main-nav__wrapper--active {
+  transform: translateY(0%);
 }
 
 .main-nav__list {
