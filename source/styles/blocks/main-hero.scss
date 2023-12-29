@@ -1,4 +1,6 @@
 .main-hero {
+  margin-bottom: 20px;
+
   font-family: $primary-font;
   line-height: 1;
   text-align: center;
@@ -7,10 +9,12 @@
 
   background: linear-gradient(to bottom, $brand-color 0%, $brand-color 302px, $white 302px, $white 100%);
   opacity: 0.85;
-}
-
-.main-hero__title {
-  color: $white;
+  background-image:
+    image-set(
+    url("../../images/hero_background-mob@1x.jpg") type("image/jpg") 1x,
+    url("../../images/hero_background-mob@2x.jpg") type("image/jpg") 2x);
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 .main-hero__content {
@@ -20,4 +24,19 @@
 
 .main-hero__link {
   order: 2;
+}
+
+.main-hero__title {
+  margin-top: 27px;
+  margin-bottom: 25px;
+  color: $white;
+}
+
+.main-hero__text {
+  margin-top: 0;
+  margin-bottom: 29px;
+}
+
+.main-hero__product-image {
+  display: block;
 }
