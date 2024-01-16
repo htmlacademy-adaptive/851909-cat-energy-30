@@ -1,4 +1,6 @@
 .main-hero {
+  position: relative;
+  max-width: 1440px;
   margin-bottom: 20px;
 
   font-family: $primary-font;
@@ -7,36 +9,94 @@
   text-transform: uppercase;
   color: $white;
 
-  background: linear-gradient(to bottom, $brand-color 0%, $brand-color 302px, $white 302px, $white 100%);
-  opacity: 0.85;
   background-image:
     image-set(
-    url("../../images/hero_background-mob@1x.jpg") type("image/jpg") 1x,
-    url("../../images/hero_background-mob@2x.jpg") type("image/jpg") 2x);
+      url("../../images/hero_background-mob@1x.jpg") type("image/jpg") 1x,
+      url("../../images/hero_background-mob@2x.jpg") type("image/jpg") 2x);
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: 320px 302px;
+  background-position: top center;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -2;
+
+    width: 100%;
+    height: 302px;
+
+    background: linear-gradient(to bottom, $brand-color 0%, $brand-color 303px, $white 303px, $white 100%);
+    opacity: 0.85;
+
+    @media (min-width: $tablet-width) {
+      background: none;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    position: relative;
+
+    height: 922px;
+    margin-bottom: 0;
+
+    text-align: left;
+    color: $black;
+
+    background: none;
+    background-image: none;
+  }
 }
 
 .main-hero__content {
   display: flex;
   flex-direction: column;
+
+  @media (min-width: $tablet-width) {
+    max-width: 510px;
+    padding-left: 90px;
+  }
 }
 
 .main-hero__link {
   order: 2;
+
+  @media (min-width: $tablet-width) {
+    width: 244px;
+  }
 }
 
 .main-hero__title {
   margin-top: 27px;
   margin-bottom: 25px;
   color: $white;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 65px;
+    margin-bottom: 40px;
+
+    color: $header-color;
+  }
 }
 
 .main-hero__text {
   margin-top: 0;
   margin-bottom: 29px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 50px;
+  }
 }
 
 .main-hero__product-image {
-  display: block;
+  @media (min-width: $tablet-width) {
+    position: absolute;
+    top: 266px;
+    left: 0;
+    z-index: -1;
+
+    width: 100%;
+    height: revert-layer;
+  }
 }

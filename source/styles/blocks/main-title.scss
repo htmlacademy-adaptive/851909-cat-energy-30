@@ -5,4 +5,8 @@
   font-weight: 400;
   text-transform: none;
   color: $header-color;
+
+  @media (min-width: $tablet-width) {
+    font-size: 60px;
+  }
 }
