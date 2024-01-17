@@ -40,10 +40,12 @@
   height: 65px;
 
   @media (min-width: $tablet-width) {
+    align-items: end;
     height: 75px;
   }
 
   @media (min-width: $desktop-width) {
+    align-items: end;
     height: 114px;
   }
 }

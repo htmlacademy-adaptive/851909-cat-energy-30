@@ -1,7 +1,5 @@
 .main-hero {
   position: relative;
-  max-width: 1440px;
-  margin-bottom: 20px;
 
   font-family: $primary-font;
   line-height: 1;
@@ -52,6 +50,7 @@
 .main-hero__content {
   display: flex;
   flex-direction: column;
+  padding-bottom: 20px;
 
   @media (min-width: $tablet-width) {
     max-width: 510px;

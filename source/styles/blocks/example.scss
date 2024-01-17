@@ -1,24 +1,24 @@
 .example {
-  padding-top: 25px;
-  padding-bottom: 40px;
-
   background: $bg-gray-dark;
 
   @media (min-width: $tablet-width) {
-    padding-top: 0;
-    padding-bottom: 101px;
-
     background: linear-gradient(to bottom, $white 0%, $white 575px, $bg-gray-dark 575px, $bg-gray-dark 100%);
   }
 
   @media (min-width: $desktop-width) {
-    padding-bottom: 75px;
-
     background: linear-gradient(to bottom, $white 0%, $white 135px, $bg-gray-dark 135px, $bg-gray-dark 100%);
   }
 }
 
 .example__inner {
+  padding-top: 25px;
+  padding-bottom: 40px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 0;
+    padding-bottom: 101px;
+  }
+
   @media (min-width: $desktop-width) {
     display: grid;
     grid-template:
@@ -26,6 +26,7 @@
       "text slider" 165px
       "info slider" 152px
       /auto 560px;
+    padding-bottom: 75px;
   }
 }
 
@@ -150,7 +151,7 @@
     bottom: -5px;
 
     width: max-content;
-    padding: 0 5px;
+    padding: 0 10px;
 
     font-size: 14px;
 

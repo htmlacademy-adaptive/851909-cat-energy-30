@@ -1,5 +1,5 @@
-.explanation {
-  margin-bottom: 53px;
+.explanation__wrapper {
+  padding-bottom: 53px;
 
   @media (min-width: $tablet-width) {
     padding-bottom: 47px;
@@ -9,7 +9,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding-bottom: 0;
+    padding: 0;
     margin-bottom: 70px;
 
     border-bottom: none;
@@ -136,7 +136,13 @@
   }
 }
 
+.explanation__list-item:last-child {
+  margin-bottom: 0;
+}
+
 .explanation__text {
+  margin: 0;
+
   @media (min-width: $tablet-width) {
     width: 250px;
     margin-top: 0;
