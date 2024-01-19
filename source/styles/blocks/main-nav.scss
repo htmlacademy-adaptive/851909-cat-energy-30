@@ -33,6 +33,8 @@
   @media (min-width: $desktop-width) {
     font-size: 20px;
     line-height: 1;
+
+    background: $transparent;
   }
 }
 
@@ -75,6 +77,16 @@
 
     &--current {
       border-bottom: 2px solid $brand-color;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &--color-reverse {
+      color: $white;
+    }
+
+    &--current-color-reverse {
+      border-bottom: 2px solid $white;
     }
   }
 }

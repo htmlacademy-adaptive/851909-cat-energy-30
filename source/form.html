@@ -48,56 +48,101 @@
         <div class="container">
           <h1 class="selection__title main-title">Подбор программы</h1>
           <p class="selection__note">Заполните анкету, и мы подберем программу питания для вашего кота</p>
-          <form class="selection__form" action="https://echo.htmlacademy.ru" method="post">
+        </div>
+        <form class="selection__form" action="https://echo.htmlacademy.ru" method="post">
+          <div class="selection__options-diet-wrapper">
             <div class="selection__options options">
-              <label class="options__label" for="pet-name">Имя*</label>
-              <input class="options__input" type="text" name="pet-name" id="pet-name" placeholder="Барсик" required>
-              <label class="options__label" for="weight">Вес (кг)*</label>
-              <input class="options__input" type="text" name="weight" id="weight" placeholder="7" required>
-              <label class="options__label" for="age">Возраст (лет)*</label>
-              <input class="options__input" type="text" name="age" id="age" placeholder="7" required>
+              <label class="options__label" for="pet-name">
+                Имя*
+                <input class="options__input" type="text" name="pet-name" id="pet-name" placeholder="Барсик" required>
+              </label>
+              <label class="options__label" for="weight">
+                Вес (кг)*
+                <input class="options__input" type="text" name="weight" id="weight" placeholder="7" required>
+              </label>
+              <label class="options__label" for="age">
+                Возраст (лет)*
+                <input class="options__input" type="text" name="age" id="age" placeholder="7" required>
+              </label>
             </div>
             <div class="selection__diet diet">
               <h2 class="visually-hidden">Выбирите программу</h2>
-              <input type="radio" name="choice" id="loss" checked>
-              <label class="diet__label" for="loss">Похудение</label>
-              <input type="radio" name="choice" id="gain">
-              <label class="diet__label" for="gain">Набор массы</label>
-              <input type="radio" name="choice" id="advice">
-              <label class="diet__label" for="advice">Не знаю (нужен ваш совет)</label>
+              <label class="diet__label" for="loss">
+                <input class="diet__input visually-hidden" type="radio" name="choice" id="loss" checked>
+                <span class="diet__radio"></span>
+                Похудение
+              </label>
+              <label class="diet__label" for="gain">
+                <input class="diet__input visually-hidden " type="radio" name="choice" id="gain">
+                <span class="diet__radio"></span>
+                Набор массы
+              </label>
+              <label class="diet__label" for="advice">
+                <input class="diet__input visually-hidden" type="radio" name="choice" id="advice">
+                <span class="diet__radio"></span>
+                Не знаю (нужен ваш совет)
+              </label>
             </div>
-            <div class="selection__contact-details contact-details">
-              <h2 class="contact-details__title title-second-lvl">Контактные данные (владельца кота)</h2>
-              <label class="contact-details__label contact-details__label--email" for="email">E-mail:*</label>
-              <input class="contact-details__input" type="email" name="email" id="email" placeholder="kuklachev@gmail.com" required>
-              <label class="contact-details__label contact-details__label--phone" for="phone">Телефон:*</label>
-              <input class="contact-details__input" type="tel" name="phone" id="phone" placeholder="8 (960) 900-60-90" required>
+          </div>
+          <div class="selection__contact-details contact-details">
+            <h2 class="contact-details__title title-second-lvl">Контактные данные (владельца кота)</h2>
+            <div class="container">
+              <div class="selection__contact-details-wrapper">
+                <label class="contact-details__label contact-details__label--email" for="email">
+                  E-mail:*
+                  <input class="contact-details__input" type="email" name="email" id="email" placeholder="kuklachev@gmail.com" required>
+                </label>
+                <label class="contact-details__label contact-details__label--phone" for="phone">
+                  Телефон:*
+                  <input class="contact-details__input" type="tel" name="phone" id="phone" placeholder="8 (960) 900-60-90" required>
+                </label>
+              </div>
             </div>
-            <div class="selection__comment comment">
-              <h2 class="comment__title title-second-lvl">Комментарий</h2>
-              <label class="visually-hidden" for="textarea">Введите текст</label>
-              <textarea class="comment__textarea" name="textarea" id="textarea" cols="30" rows="10">Расскажите обо всех повадках кота</textarea>
+          </div>
+          <div class="selection__comment comment">
+            <h2 class="comment__title title-second-lvl">Комментарий</h2>
+            <div class="container">
+              <div class="selection__comment-wrapper">
+                <label class="visually-hidden" for="textarea">Введите текст</label>
+                <textarea class="comment__textarea" name="textarea" id="textarea" placeholder="Расскажите обо всех повадках кота" cols="30" rows="7" ></textarea>
+              </div>
             </div>
-            <div class="selection__optional optional">
-              <h2 class="optional__title title-second-lvl">Дополнительно</h2>
-              <input class="optional__item" type="checkbox" name="sweetener" id="sweetener" checked>
-              <label class="optional__label" for="sweetener">Сахарозаменитель</label>
-              <input class="optional__item" type="checkbox" name="water" id="water">
-              <label class="optional__label" for="water">Питьевая вода</label>
-              <input class="optional__item" type="checkbox" name="milk" id="milk">
-              <label class="optional__label" for="milk">Молоко</label>
-              <input class="optional__item" type="checkbox" name="vitamins" id="vitamins">
-              <label class="optional__label" for="vitamins">Витамины</label>
+          </div>
+          <div class="selection__optional optional">
+            <h2 class="optional__title title-second-lvl">Дополнительно</h2>
+            <div class="container">
+              <div class="selection__optional-wrapper">
+                <label class="optional__label" for="sweetener">
+                  <input class="optional__input visually-hidden" type="checkbox" name="sweetener" id="sweetener" checked>
+                  <span class="optional__box"></span>
+                  Сахарозаменитель
+                </label>
+                <label class="optional__label" for="water">
+                  <input class="optional__input visually-hidden" type="checkbox" name="water" id="water">
+                  <span class="optional__box"></span>
+                  Питьевая вода
+                </label>
+                <label class="optional__label" for="milk">
+                  <input class="optional__input visually-hidden" type="checkbox" name="milk" id="milk">
+                  <span class="optional__box"></span>
+                  Молоко
+                </label>
+                <label class="optional__label" for="vitamins">
+                  <input class="optional__input visually-hidden" type="checkbox" name="vitamins" id="vitamins">
+                  <span class="optional__box"></span>
+                  Витамины
+                </label>
+                <button class="selection__button button" type="submit">Отправить заявку</button>
+                <p class="selection__required-fields">* — Обязательные поля</p>
+              </div>
             </div>
-            <button class="selection__button button" type="submit">Отправить заявку</button>
-            <p class="selection__required-fields">* - Обязательные поля</p>
-          </form>
-        </div>
+          </div>
+        </form>
       </section>
       <section class="contacts">
         <div class="contacts__wrapper">
           <div class="contacts__inner contacts__inner--bg">
-            <h2 class="contacts__title">Приглашаем к сотрудничеству дилеров!</h2>
+            <h2 class="contacts__title">Приглашаем к&nbsp;сотрудничеству дилеров!</h2>
             <div class="contacts__text">
               <p class="contacts__address">ул. Большая Конюшенная, д. 19/8</p>
               <p class="contacts__city">Санкт-Петербург</p>

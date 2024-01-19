@@ -1,3 +1,44 @@
 .diet {
+  display: grid;
+}
+
+.diet__label {
   display: flex;
+  align-items: center;
+  padding: 0 0 25px 45px;
+
+  @media (min-width: $tablet-width) {
+    padding: 0 0 23px 60px;
+  }
+}
+
+.diet__radio {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  margin: 0 0 0 -45px;
+
+  background-image: url("../../images/icons/stack.svg#radiobutton");
+  background-size: 30px;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  @media (min-width: $tablet-width) {
+    width: 40px;
+    height: 40px;
+
+    background-size: 40px;
+    margin: 0 0 0 -60px;
+  }
+}
+
+.diet__input:checked + .diet__radio {
+  background-image: url("../../images/icons/stack.svg#radiobutton_active");
+  background-size: 30px;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  @media (min-width: $tablet-width) {
+    background-size: 40px;
+  }
 }

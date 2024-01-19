@@ -20,7 +20,7 @@
 
   text-align: center;
 
-  border-bottom: 1px solid $diets-border-gray;
+  border-bottom: 1px solid $border-diets-gray;
 
   @media (min-width: $tablet-width) {
     width: auto;
@@ -43,7 +43,7 @@
   margin: 0;
   padding: 20px 0;
 
-  border-bottom: 1px solid $diets-border-gray;
+  border-bottom: 1px solid $border-diets-gray;
   list-style: none;
 
   @media (min-width: $tablet-width) {

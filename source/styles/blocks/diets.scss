@@ -16,6 +16,7 @@
   @media (min-width: $desktop-width) {
     justify-content: center;
     gap: 80px;
+    margin-top: 82px;
     padding-bottom: 71px;
   }
 }
@@ -163,7 +164,7 @@
   margin-bottom: 19px;
   padding-bottom: 23px;
 
-  border-bottom: 1px solid $diets-border-gray;
+  border-bottom: $border-diets-gray;
 
   @media (min-width: $tablet-width) {
     width: 340px;
