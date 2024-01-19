@@ -1,4 +1,18 @@
-.logo-text {
-  width: 101px;
-  height: 18px;
+.logo__logo-image {
+  display: block;
+  flex: 0 0 33px;
+}
+
+.logo__logo-text-wrapper {
+  flex: 1 1 auto;
+}
+
+.logo__logo-text {
+  display: block;
+  margin: 0 auto;
+
+  @media (min-width: $desktop-width) {
+    width: 118px;
+    height: 21px;
+  }
 }
