@@ -1,1 +1,1 @@
-var e=document.querySelector(".main-nav__toggle"),n=document.querySelector(".main-nav__wrapper");e.addEventListener("click",()=>{n.classList.toggle("main-nav__wrapper--active")});
+var e=document.querySelector(".header__toggle"),t=document.querySelector(".main-nav");e.addEventListener("click",()=>{e.classList.toggle("is-open"),t.classList.toggle("is-open")});
