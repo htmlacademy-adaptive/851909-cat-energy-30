@@ -189,6 +189,8 @@
   width: 290px;
   margin: 0 auto;
 
+  overflow: hidden;
+
   @media (min-width: $tablet-width) {
     width: 560px;
   }
@@ -196,6 +198,10 @@
   @media (min-width: $desktop-width) {
     grid-area: slider;
   }
+}
+
+.example__slider-after-image {
+  display: block;
 }
 
 .example__slider-before {
@@ -209,19 +215,6 @@
   @media (min-width: $tablet-width) {
     height: 512px;
   }
-
-  &::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: -2px;
-
-    width: 4px;
-    height: 100%;
-
-    border-radius: 2px;
-    background-color: $devider-grey;
-  }
 }
 
 .example__slider-inner {
@@ -232,6 +225,7 @@
 }
 
 .example__slider-before-image {
+  display: block;
   max-width: inherit;
 
   background: $bg-gray-dark;
@@ -247,15 +241,47 @@
 
 .example__button {
   position: absolute;
-  top: 50%;
+  top: 0;
   right: 50%;
-  transform: translate(50%, -50%);
+  transform: translate(50%, 0);
   z-index: 2;
 
-  width: 40px;
-  height: 40px;
+  height: 100%;
+  padding: 0;
 
-  background-color: $white;
-  border: 2px solid $devider-grey;
-  border-radius: 50%;
+  background-color: $transparent;
+  border: 0;
+
+  &:focus {
+    outline: 0;
+  }
+
+  &:hover,
+  &:focus-visible {
+    color: $brand-color;
+  }
+
+  &:active {
+    color: $brand-color;
+    opacity: 0.6;
+  }
+}
+
+.example__button-icon {
+  position: relative;
+  bottom: 50%;
+
+  @media (min-width: $tablet-width) {
+    position: initial;
+  }
+}
+
+.example__button-icon-line {
+  height: 256px;
+  transform: translateY(128px);
+
+  @media (min-width: $tablet-width) {
+    height: 512px;
+    transform: none;
+  }
 }

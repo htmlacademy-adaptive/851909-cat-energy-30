@@ -1,11 +1,6 @@
 .comment {
   position: relative;
 
-  @media (min-width: $desktop-width) {
-    max-width: 1440px;
-    margin: 0 auto;
-  }
-
   &::before {
     content: "";
     position: absolute;
@@ -39,6 +34,7 @@
 
   @media (min-width: $desktop-width) {
     margin: 0 0 87px 70px;
+    margin-left: calc(50% - (1220px/2) - 40px);
   }
 }
 

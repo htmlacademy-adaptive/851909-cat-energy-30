@@ -71,16 +71,19 @@
           url("../../images/hero_background-pc@1x.jpg") type("image/jpg") 1x,
           url("../../images/hero_background-pc@2x.jpg") type("image/jpg") 2x);
       background-repeat: no-repeat;
-      background-size: 720px 694px;
+      background-size: cover;
       background-position: top left;
     }
   }
 }
 
+.main-hero__inner {
+  margin-bottom: 20px;
+}
+
 .main-hero__content {
   display: flex;
   flex-direction: column;
-  padding-bottom: 20px;
 
   @media (min-width: $tablet-width) {
     max-width: 510px;

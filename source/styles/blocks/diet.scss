@@ -3,6 +3,7 @@
 }
 
 .diet__label {
+  position: relative;
   display: flex;
   align-items: center;
   padding: 0 0 25px 45px;
@@ -12,33 +13,69 @@
   }
 }
 
-.diet__radio {
+.diet__radio::before {
+  content: "";
   position: absolute;
+  top: -50%;
+  transform: translateY(50%);
   width: 30px;
   height: 30px;
   margin: 0 0 0 -45px;
 
-  background-image: url("../../images/icons/stack.svg#radiobutton");
-  background-size: 30px;
-  background-repeat: no-repeat;
-  background-position: center;
+  border: 1px solid $example-border-gray;
+  border-radius: 50%;
 
   @media (min-width: $tablet-width) {
+    transform: translateY(37%);
+
     width: 40px;
     height: 40px;
 
-    background-size: 40px;
     margin: 0 0 0 -60px;
   }
 }
 
-.diet__input:checked + .diet__radio {
-  background-image: url("../../images/icons/stack.svg#radiobutton_active");
-  background-size: 30px;
-  background-repeat: no-repeat;
-  background-position: center;
+.diet__radio::after {
+  content: "";
+  position: absolute;
+  top: 5%;
+  width: 13px;
+  height: 13px;
+  margin: 0 0 0 -36px;
+
+  background-color: $white;
+  border-radius: 50%;
 
   @media (min-width: $tablet-width) {
-    background-size: 40px;
+
+    width: 18px;
+    height: 18px;
+
+    margin: 0 0 0 -48.5px;
   }
+}
+
+.diet__input:checked + .diet__radio::after {
+  background-color: $brand-color;
+}
+
+.diet__input:focus + .diet__radio::before {
+  outline: none;
+}
+
+.diet__input:focus-visible + .diet__radio::before {
+  box-shadow: 0 0 0 2px $primary-color;
+}
+
+.diet__input:disabled + .diet__radio::before {
+  border: 1px solid $hover-border-gray;
+  opacity: 0.3;
+}
+
+.diet__input:disabled + .diet__radio::after {
+  opacity: 0.3;
+}
+
+.diet__input:disabled ~ .diet__input-text {
+  opacity: 0.3;
 }

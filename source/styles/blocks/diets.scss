@@ -184,14 +184,49 @@
 }
 
 .diets__link {
+  position: relative;
+
+  padding-right: 57px;
+
   font-family: $primary-font;
   font-size: 16px;
   line-height: 1;
   text-transform: uppercase;
   color: $black;
 
+  &:focus {
+    outline: 0;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    width: 32px;
+    height: 10px;
+
+    background-image: url("../../images/icons/stack.svg#arrow_right");
+    background-repeat: no-repeat;
+    background-position-x: -8px;
+
+    transition: all 0.3s ease 0s;
+  }
+
+  &:hover::before,
+  &:focus-visible::before {
+    background-position-x: 0;
+
+    transition: all 0.3s ease 0s;
+  }
+
   @media (min-width: $tablet-width) {
     font-size: 20px;
-    list-style: 1.2;
+    line-height: 1.2;
   }
 }

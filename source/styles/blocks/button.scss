@@ -13,11 +13,38 @@
 
   background-color: $brand-color;
   border: none;
+  cursor: pointer;
+
+  &:focus {
+    outline: 0;
+  }
+
+  &:hover,
+  &:focus-visible {
+    background-color: $brand-color-second;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
 
   &--transparent {
     color: $primary-color;
 
     background-color: $bg-gray;
+
+    &:focus {
+      outline: 0;
+    }
+
+    &:hover,
+    &:focus-visible {
+      background-color: $product-border-gray;
+    }
+
+    &:active {
+      background-color: $product-border-gray;
+    }
   }
 
   @media (min-width: $tablet-width) {

@@ -8,6 +8,21 @@
   line-height: 1.25;
   color: $primary-color;
 
+  &:focus {
+    outline: none;
+  }
+
+  &:hover .developer__logo,
+  &:focus-visible .developer__logo {
+    path {
+      fill: $brand-color;
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
   @media (min-width: $tablet-width) {
     width: 250px;
     padding: 0;
