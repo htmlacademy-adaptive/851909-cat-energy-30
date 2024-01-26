@@ -32,6 +32,42 @@
 
 .footer__link {
   display: block;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:hover,
+  &:focus-visible {
+    path {
+      fill: $footer-hover-color;
+    }
+  }
+
+  &:active {
+    path {
+      fill: $footer-hover-active;
+    }
+  }
+}
+
+.footer__social-link {
+  display: flex;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:hover .footer__social-icon,
+  &:focus-visible .footer__social-icon {
+    path {
+      fill: $brand-color;
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .footer__list {
@@ -56,8 +92,4 @@
 .footer__item {
   display: flex;
   align-items: center;
-}
-
-.footer__social-link {
-  display: flex;
 }

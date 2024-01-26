@@ -40,13 +40,17 @@
   height: 65px;
 
   @media (min-width: $tablet-width) {
-    align-items: end;
-    height: 75px;
+    gap: 94px;
+    align-items: center;
+    height: 100%;
+
+    padding: 25px 0 0 0;
   }
 
   @media (min-width: $desktop-width) {
-    align-items: end;
-    height: 114px;
+    gap: 430px;
+    align-items: center;
+    height: 100%;
   }
 }
 
@@ -57,9 +61,23 @@
   align-items: center;
   width: 100%;
 
+  &:focus {
+    outline: 0;
+  }
+
+  &:hover,
+  &:focus-visible {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+
   @media (min-width: $tablet-width) {
-    width: auto;
     gap: 13px;
+    flex-shrink: 0;
+    width: auto;
   }
 }
 
@@ -72,7 +90,8 @@
   height: 16px;
 
   background-color: transparent;
-  border: 0;
+  border: none;
+  cursor: pointer;
 
   &::before,
   &::after {
@@ -80,7 +99,7 @@
     position: absolute;
     left: 0;
 
-    width: 100%;
+    width: 24px;
     height: 2px;
 
     background-color: $black;
@@ -101,7 +120,11 @@
   }
 }
 
-.header__toggle span {
+.header__toggle:focus-visible {
+  outline: none;
+}
+
+.header__toggle-line {
   position: absolute;
   left: 0;
   top: 7px;
@@ -114,18 +137,33 @@
   transition: all 0.3s ease 0s;
 }
 
+.header__toggle:focus-visible .header__toggle-line,
+.header__toggle:focus-visible::before,
+.header__toggle:focus-visible::after {
+  background-color: $brand-color;
+}
+
+.header__toggle:active .header__toggle-line,
+.header__toggle:active::before,
+.header__toggle:active::after {
+  background-color: $brand-color;
+  opacity: 0.3;
+}
+
 .header__toggle.is-open {
   &::before {
     transform: rotate(45deg);
     top: 8px;
+    width: 25px;
   }
 
   &::after {
     transform: rotate(-45deg);
     top: 8px;
+    width: 25px;
   }
 }
 
-.header__toggle.is-open span {
+.header__toggle.is-open .header__toggle-line {
   transform: scale(0);
 }
