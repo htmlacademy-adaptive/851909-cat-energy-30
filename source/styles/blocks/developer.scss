@@ -24,8 +24,13 @@
   }
 
   @media (min-width: $tablet-width) {
-    width: 250px;
+    flex-basis: 163px;
+    flex-shrink: 0;
     padding: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 250px;
   }
 }
 

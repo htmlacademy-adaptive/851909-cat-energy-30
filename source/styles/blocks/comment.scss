@@ -7,6 +7,7 @@
     top: 14px;
     left: 0;
     z-index: -1;
+
     width: 100%;
 
     border-bottom: 2px solid $brand-color;
@@ -19,7 +20,7 @@
 
 .comment__title {
   width: 161px;
-  margin: 0 0 38px 0;
+  margin: 0 0 36px 0;
   padding: 0 20px;
 
   background: $white;
@@ -33,7 +34,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin: 0 0 87px 70px;
+    margin: 0 0 79px 70px;
     margin-left: calc(50% - (1220px/2) - 40px);
   }
 }
@@ -42,7 +43,7 @@
   display: block;
   width: 100%;
   height: 150px;
-  padding: 14px 14px 14px 15px;
+  padding: 15px 14px 14px 15px;
 
   font-family: $primary-font;
   font-size: 16px;
@@ -51,10 +52,23 @@
   text-transform: uppercase;
   color: $primary-color;
 
+  border: 0;
+  box-shadow: inset 0 0 0 1px #e7e7e7;
+
   resize: none;
 
+  &:hover {
+    box-shadow: inset 0 0 0 1px $example-border-gray;
+  }
+
+  &:focus-visible {
+    outline: 0;
+    box-shadow: inset 0 0 0 2px $primary-color;
+  }
+
   @media (min-width: $tablet-width) {
-    padding: 9px 20px 9px 20px;
+    height: 175px;
+    padding: 10px 20px 10px 20px;
 
     font-size: 20px;
     line-height: 1.5;

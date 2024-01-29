@@ -15,10 +15,6 @@
   border: none;
   cursor: pointer;
 
-  &:focus {
-    outline: 0;
-  }
-
   &:hover,
   &:focus-visible {
     background-color: $brand-color-second;
@@ -32,10 +28,6 @@
     color: $primary-color;
 
     background-color: $bg-gray;
-
-    &:focus {
-      outline: 0;
-    }
 
     &:hover,
     &:focus-visible {

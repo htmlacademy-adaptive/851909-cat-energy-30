@@ -11,12 +11,10 @@
 }
 
 .example__inner {
-  padding-top: 25px;
-  padding-bottom: 40px;
+  padding: 25px 0 40px 0;
 
   @media (min-width: $tablet-width) {
-    padding-top: 0;
-    padding-bottom: 101px;
+    padding: 0 0 101px 0;
   }
 
   @media (min-width: $desktop-width) {
@@ -26,30 +24,29 @@
       "text slider" 165px
       "info slider" 152px
       /auto 560px;
-    padding-bottom: 75px;
+    padding: 0 0 75px 0;
   }
 }
 
 .example__title {
-  margin-top: 0;
-  margin-bottom: 40px;
+  margin: 0 0 40px 0;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 60px;
+    margin: 0 0 46px 0;
   }
 
   @media (min-width: $desktop-width) {
     grid-area: header;
-    margin-bottom: 0;
+    margin: 0;
   }
 }
 
 .example__text {
-  margin-bottom: 20px;
+  margin: 0 0 20px 0;
 
   @media (min-width: $tablet-width) {
     max-width: 700px;
-    margin-bottom: 55px;
+    margin: 0 0 55px 0;
 
     font-size: 16px;
     line-height: 1.5;
@@ -58,8 +55,7 @@
   @media (min-width: $desktop-width) {
     grid-area: text;
     width: 436px;
-    margin-top: 0;
-    margin-bottom: 0;
+    margin: 0;
   }
 }
 
@@ -68,7 +64,7 @@
     display: flex;
     align-items: center;
     gap: 167px;
-    margin-bottom: 104px;
+    margin: 0 0 104px 0;
   }
 
   @media (min-width: $desktop-width) {
@@ -76,8 +72,8 @@
 
     flex-direction: column;
     align-items: start;
-    gap: 60px;
-    margin-bottom: 0;
+    gap: 56px;
+    margin: 0;
   }
 }
 
@@ -85,12 +81,11 @@
   display: flex;
   justify-content: center;
   gap: 32px;
-  margin-bottom: 34px;
+  margin: 0 0 33px 0;
 
   @media (min-width: $tablet-width) {
     gap: 43px;
-    margin-top: 0;
-    margin-bottom: 0;
+    margin: 0;
   }
 
   @media (min-width: $desktop-width) {
@@ -101,16 +96,16 @@
 .example__info-item {
   position: relative;
   width: 124px;
-  padding-top: 15px;
-  padding-bottom: 18px;
+  padding: 15px 0 18px 0;
+
   background-color: $bg-gray-dark;
   border: 1px solid $example-border-gray;
   border-radius: 3px;
 
   @media (min-width: $tablet-width) {
     width: 162px;
-    padding-top: 15px;
-    padding-bottom: 20px;
+    padding: 15px 0 20px 0;
+
     background-color: $white;
   }
 
@@ -136,12 +131,14 @@
 .example__info-text {
   position: absolute;
   left: 50%;
-  bottom: -18px;
+  bottom: -15px;
   transform: translateX(-50%);
 
-  width: 87px;
+  width: 85px;
   margin: 0 auto;
+  padding: 0 2px;
 
+  font-size: 12px;
   line-height: 1;
   text-align: center;
 
@@ -164,7 +161,7 @@
 }
 
 .example__costs {
-  margin-bottom: 20px;
+  margin: 0 0 20px 0;
 
   font-family: $primary-font;
   line-height: 1.42;
@@ -173,20 +170,20 @@
   color: $black;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 0;
+    margin: 0;
 
     text-align: right;
   }
 
   @media (min-width: $desktop-width) {
     display: flex;
-    gap: 63px;
+    gap: 66px;
   }
 }
 
 .example__slider {
   position: relative;
-  width: 290px;
+  width: 280px;
   margin: 0 auto;
 
   overflow: hidden;
@@ -249,6 +246,9 @@
   height: 100%;
   padding: 0;
 
+  color: $devider-grey;
+  stroke: $devider-grey;
+
   background-color: $transparent;
   border: 0;
 
@@ -259,11 +259,17 @@
   &:hover,
   &:focus-visible {
     color: $brand-color;
+    stroke: $brand-color;
   }
 
   &:active {
     color: $brand-color;
+    stroke: $brand-color;
     opacity: 0.6;
+  }
+
+  @media (min-width: $desktop-width) {
+    top: -3px;
   }
 }
 
@@ -277,11 +283,13 @@
 }
 
 .example__button-icon-line {
-  height: 256px;
   transform: translateY(128px);
 
+  height: 256px;
+
   @media (min-width: $tablet-width) {
-    height: 512px;
     transform: none;
+
+    height: 512px;
   }
 }
