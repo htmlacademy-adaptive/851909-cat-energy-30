@@ -12,18 +12,23 @@
     flex-direction: row;
     padding: 55px 0;
   }
+
+  @media (min-width: $desktop-width) {
+    padding: 68px 0;
+  }
 }
 
 .footer__logo {
   width: 100%;
-  padding-bottom: 20px;
+  padding-bottom: 19px;
 
   text-align: center;
 
   border-bottom: 1px solid $border-diets-gray;
 
   @media (min-width: $tablet-width) {
-    width: auto;
+    flex-basis: 163px;
+    flex-shrink: 0;
     padding-bottom: 0;
 
     border-bottom: none;
@@ -48,6 +53,15 @@
     path {
       fill: $footer-hover-active;
     }
+  }
+}
+
+.footer__logo-image-text {
+  display: block;
+  margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    margin: 0;
   }
 }
 
@@ -77,7 +91,7 @@
   gap: 24px;
   width: 100%;
   margin: 0;
-  padding: 20px 0;
+  padding: 20px 0 19px 0;
 
   border-bottom: 1px solid $border-diets-gray;
   list-style: none;
