@@ -1,7 +1,7 @@
 .developer {
   display: flex;
   align-items: center;
-  width: 280px;
+  width: 100%;
   padding-top: 20px;
 
   font-size: 16px;
@@ -28,17 +28,10 @@
     flex-shrink: 0;
     padding: 0;
   }
-
-  @media (min-width: $desktop-width) {
-    width: 250px;
-  }
 }
 
 .developer__logo {
   display: flex;
   margin-left: auto;
-
-  @media (min-width: $tablet-width) {
-    margin-left: 23px;
-  }
+  flex-shrink: 0;
 }

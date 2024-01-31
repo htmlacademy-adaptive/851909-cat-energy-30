@@ -18,6 +18,7 @@
   }
 
   @media (min-width: $desktop-width) {
+    width: 50%;
     margin: 188px 0 55px 0;
   }
 }
@@ -39,7 +40,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin: 0 0 66px 0;
+    margin: 0 0 64px 0;
   }
 }
 
@@ -157,7 +158,7 @@
 }
 
 .selection__button {
-  margin: 17px 0 21px 0;
+  margin: 13px 0 22px 0;
 
   @media (min-width: $tablet-width) {
     margin: 12px 0 0 0;
@@ -183,10 +184,10 @@
     font-size: 16px;
     line-height: 1;
 
-    margin: 5px 0 0 0;
+    margin: 6px 0 0 0;
   }
 
-  @media (min-width: $tablet-width) {
+  @media (min-width: $desktop-width) {
     margin: 16px 0 0 0;
   }
 }

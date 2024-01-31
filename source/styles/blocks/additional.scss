@@ -215,7 +215,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    height: 100%;
+    height: fit-content;
     margin: 0;
 
     background-image:
@@ -274,7 +274,7 @@
 
   @media (min-width: $desktop-width) {
     margin: 0 auto;
-    padding: 185px 0 0 0;
+    padding: 185px 0 43px 0;
 
     text-align: center;
   }
