@@ -2,7 +2,7 @@
   background: $bg-gray-dark;
 
   @media (min-width: $tablet-width) {
-    background: linear-gradient(to bottom, $white 0%, $white 575px, $bg-gray-dark 575px, $bg-gray-dark 100%);
+    background: linear-gradient(to top, $bg-gray-dark 0, $bg-gray-dark 462px, $white 462px, $white 100%);
   }
 
   @media (min-width: $desktop-width) {
@@ -18,26 +18,28 @@
   }
 
   @media (min-width: $desktop-width) {
-    display: grid;
-    grid-template:
-      "header slider" 205px
-      "text slider" 165px
-      "info slider" 152px
-      /auto 560px;
-    padding: 0 0 75px 0;
+    display: flex;
+    justify-content: space-between;
+
+    padding: 0 0 70px 0;
+  }
+}
+
+.example__text-column {
+  @media (min-width: $desktop-width) {
+    width: 436px;
   }
 }
 
 .example__title {
-  margin: 0 0 40px 0;
+  margin: 0 0 41px 0;
 
   @media (min-width: $tablet-width) {
-    margin: 0 0 46px 0;
+    margin: 0 0 59px 0;
   }
 
   @media (min-width: $desktop-width) {
-    grid-area: header;
-    margin: 0;
+    margin: 0 0 145px 0;
   }
 }
 
@@ -53,9 +55,8 @@
   }
 
   @media (min-width: $desktop-width) {
-    grid-area: text;
     width: 436px;
-    margin: 0;
+    margin: 0 0 70px 0;
   }
 }
 
@@ -64,15 +65,13 @@
     display: flex;
     align-items: center;
     gap: 167px;
-    margin: 0 0 104px 0;
+    margin: 0 0 99px 0;
   }
 
   @media (min-width: $desktop-width) {
-    grid-area: info;
-
     flex-direction: column;
     align-items: start;
-    gap: 56px;
+    gap: 51px;
     margin: 0;
   }
 }
@@ -81,7 +80,7 @@
   display: flex;
   justify-content: center;
   gap: 32px;
-  margin: 0 0 33px 0;
+  margin: 0 0 19px 0;
 
   @media (min-width: $tablet-width) {
     gap: 43px;
@@ -94,27 +93,16 @@
 }
 
 .example__info-item {
-  position: relative;
   width: 124px;
-  padding: 15px 0 18px 0;
-
-  background-color: $bg-gray-dark;
-  border: 1px solid $example-border-gray;
-  border-radius: 3px;
 
   @media (min-width: $tablet-width) {
     width: 162px;
-    padding: 15px 0 20px 0;
-
-    background-color: $white;
-  }
-
-  @media (min-width: $desktop-width) {
-    background-color: $bg-gray-dark;
   }
 }
 
 .example__info-value {
+  padding: 15px 0 18px 0;
+
   font-family: $primary-font;
   font-size: 24px;
   line-height: 1;
@@ -122,20 +110,20 @@
   text-transform: uppercase;
   color: $black;
 
+  border: 1px solid $example-border-gray;
+  border-radius: 3px;
+
   @media (min-width: $tablet-width) {
+    padding: 15px 0 20px 0;
+
     font-size: 30px;
     line-height: 1.23;
   }
 }
 
 .example__info-text {
-  position: absolute;
-  left: 50%;
-  bottom: -15px;
-  transform: translateX(-50%);
-
   width: 85px;
-  margin: 0 auto;
+  margin: -10px auto 0 auto;
   padding: 0 2px;
 
   font-size: 12px;
@@ -148,6 +136,7 @@
     bottom: -5px;
 
     width: max-content;
+    max-width: 162px;
     padding: 0 10px;
 
     font-size: 14px;
@@ -193,7 +182,8 @@
   }
 
   @media (min-width: $desktop-width) {
-    grid-area: slider;
+    flex-shrink: 0;
+    margin: 0;
   }
 }
 
@@ -228,7 +218,7 @@
   background: $bg-gray-dark;
 
   @media (min-width: $tablet-width) {
-    background: linear-gradient(to bottom, $white 0%, $white 151px, $bg-gray-dark 151px, $bg-gray-dark 100%);
+    background: linear-gradient(to top, $bg-gray-dark 0, $bg-gray-dark 361px, $white 361px, $white 100%);
   }
 
   @media (min-width: $desktop-width) {
@@ -269,7 +259,9 @@
   }
 
   @media (min-width: $desktop-width) {
-    top: -3px;
+    top: 1px;
+
+    height: 512px;
   }
 }
 
