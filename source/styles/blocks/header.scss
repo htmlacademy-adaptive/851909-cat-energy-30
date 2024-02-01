@@ -142,6 +142,10 @@
   @media (min-width: $tablet-width) {
     display: none;
   }
+
+  &--no-js {
+    display: none;
+  }
 }
 
 .header__toggle:focus-visible {
