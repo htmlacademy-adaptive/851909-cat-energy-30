@@ -1,1 +1,1 @@
-var e=document.querySelector(".header__toggle"),t=document.querySelector(".main-nav");e.addEventListener("click",()=>{e.classList.toggle("is-open"),t.classList.toggle("is-open")});
+var e=document.querySelector(".header__toggle"),s=document.querySelector(".main-nav"),t=document.querySelector(".contacts__map");e.classList.remove("header__toggle--no-js");s.classList.remove("main-nav--no-js");t.classList.remove("contacts__map--no-js");e.addEventListener("click",()=>{e.classList.toggle("is-open"),s.classList.toggle("is-open")});
